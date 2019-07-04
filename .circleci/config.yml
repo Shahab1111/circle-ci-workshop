@@ -18,7 +18,7 @@ jobs:
       - checkout:
       - run: gradle jar
       - store_artifacts:
-          path: /code/test-results
+          path: /test/test-results
           destination: prefix
 workflows:
   version: 2
