@@ -12,7 +12,7 @@ jobs:
       - store_test_results:
           path: test-results
 
-  build:
+  package:
     docker:
       - image: circleci/openjdk:8-jdk
     steps:
