@@ -1,4 +1,3 @@
-workflows:
 version: 2.0
 jobs:
   test:
@@ -21,4 +20,12 @@ jobs:
       - store_artifacts:
           path: /code/test-results
           destination: prefix
-
+workflows:
+  version: 2
+  feature_master:
+    jobs:
+      - test:
+      - package:
+          requires:
+            - test
+          
